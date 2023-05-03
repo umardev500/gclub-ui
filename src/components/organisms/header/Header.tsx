@@ -1,11 +1,12 @@
-import { HeaderLeft } from '@components/molecules'
+import { HeaderLeft, HeaderRight } from '@components/molecules'
 import React from 'react'
 
 export const Header: React.FC = () => {
     return (
-        <header className="header fixed flex right-0 left-20">
-            <div className="inner container m-auto">
+        <header className="header px-4 fixed flex right-0 left-0 bg-red-100">
+            <div className="inner flex justify-between items-center container m-auto">
                 <HeaderLeft />
+                <HeaderRight />
             </div>
         </header>
     )
