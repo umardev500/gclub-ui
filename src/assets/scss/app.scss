@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "sidebar/sidebar";
+
+
+body {
+  background-color: rgb(243, 244, 249);
+}
