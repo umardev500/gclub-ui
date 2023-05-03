@@ -1,3 +1,19 @@
 .sidebar {
   box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 21px 1px;
+
+  &::after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    left: 80px;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+
+    @media (min-width: 640px) {
+      opacity: 0;
+    }
+  }
 }
