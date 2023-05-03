@@ -3,7 +3,7 @@ import { Header, Sidebar } from '..'
 
 export const Home: React.FC = () => {
     return (
-        <div>
+        <div className="shown">
             <Sidebar />
             <Header />
         </div>

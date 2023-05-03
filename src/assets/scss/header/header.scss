@@ -1,3 +1,9 @@
 .header {
   height: 72px;
 }
+
+.shown {
+  .header {
+    @apply pl-20;
+  }
+}
