@@ -19,7 +19,16 @@ export const ProfileMenu: React.FC = () => {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
             >
-                <Popover.Panel className="absolute mt-1.5 bg-white shadow-md border shadow-gray-200 rounded-md overflow-clip z-10 right-0" style={{ minWidth: 150 }}>
+                <Popover.Panel className="absolute z-10 bg-white shadow-md shadow-gray-200 overflow-clip rounded-md right-0 mt-2">
+                    <div className="flex px-4 py-2 items-center gap-3 border-b">
+                        <div className="bg-green-400 w-10 h-10 rounded-full overflow-clip">
+                            <img className="w-full h-full" src="assets/avatars/avatar-2.png" alt="avatar" />
+                        </div>
+                        <div className="pr-4">
+                            <div className="whitespace-nowrap text-gray-600 text-sm font-medium">Nora Alexandra</div>
+                            <div className="text-slate-400 text-xs">demo@gmail.com</div>
+                        </div>
+                    </div>
                     <ProfileMenuList />
                 </Popover.Panel>
             </Transition>
