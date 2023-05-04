@@ -31,5 +31,10 @@
   .sidebar-backdrop {
       opacity: 1;
       pointer-events: unset;
+
+      @media (min-width: 640px) {
+        opacity: 0;
+        pointer-events: none;
+      }
   }
 }
