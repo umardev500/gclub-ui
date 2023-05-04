@@ -27,31 +27,6 @@ const dummyData = () => {
 }
 
 export const User: React.FC = () => {
-    const cols = useMemo<Array<ColumnDef<Item>>>(() => {
-        return [
-            {
-                header: 'Username',
-                cell: (row) => row.renderValue(),
-                accessorKey: 'username',
-            },
-            {
-                header: 'Name',
-                cell: (row) => row.renderValue(),
-                accessorKey: 'name',
-            },
-            {
-                header: 'Role',
-                cell: (row) => row.renderValue(),
-                accessorKey: 'role',
-            },
-            {
-                header: 'Status',
-                cell: (row) => row.renderValue(),
-                accessorKey: 'status',
-            },
-        ]
-    }, [])
-
     return (
         <div className="container m-auto bg-white rounded-md border py-6 px-8">
             <div className="flex justify-between">
@@ -62,7 +37,7 @@ export const User: React.FC = () => {
                 </button>
             </div>
             <div>
-                <UserList data={dummyData()} columns={cols} />
+                <UserList data={dummyData()} />
             </div>
         </div>
     )
