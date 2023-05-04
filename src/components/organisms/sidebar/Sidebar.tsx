@@ -1,10 +1,10 @@
 import React, { useRef } from 'react'
 import { SidebarMenuList } from '..'
-import { useBackdrop } from '@hooks/useBackdrop'
+import { useToggle } from '@hooks/useToggle'
 
 export const Sidebar: React.FC = () => {
     const backdropRef = useRef<HTMLDivElement>(null)
-    useBackdrop(backdropRef)
+    useToggle(backdropRef)
 
     return (
         <>

@@ -1,10 +1,17 @@
 import type React from 'react'
 import { useCallback, useEffect } from 'react'
 
-export const useBackdrop = (ref: React.RefObject<HTMLDivElement>) => {
+export const useToggle = (ref: React.RefObject<HTMLDivElement>) => {
     const clickHandler = useCallback(() => {
         const rootView = document.querySelector('#root-view')
-        rootView?.classList.remove('shown')
+        const isOpen = rootView?.classList.contains('shown') ?? false
+
+        if (isOpen) {
+            rootView?.classList.remove('shown')
+            return
+        }
+
+        rootView?.classList.add('shown')
     }, [])
 
     useEffect(() => {
