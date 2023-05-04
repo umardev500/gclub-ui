@@ -8,7 +8,7 @@ interface Props {
 
 export const UserList: React.FC<Props> = ({ data }) => {
     return (
-        <div className="mt-8 mb-8">
+        <div className="mt-8 mb-8 overflow-auto">
             <table className="table w-full text-left text-gray-600">
                 <thead className="text-gray-600 uppercase bg-gray-50 text-sm ubuntu">
                     <tr>
@@ -23,13 +23,13 @@ export const UserList: React.FC<Props> = ({ data }) => {
 
                 <tbody>
                     {data.map((val, i) => (
-                        <tr className="border-b border-b-gray-100">
+                        <tr key={i} className="border-b border-b-gray-100">
                             <td className="px-6 py-4">{i + 1}</td>
-                            <td className="px-6 py-4 font-medium">{val.username}</td>
-                            <td className="px-6 py-4">{val.name}</td>
-                            <td className="px-6 py-4">{val.role}</td>
-                            <td className="px-6 py-4">{val.status}</td>
-                            <td className="px-6 py-4text-center">
+                            <td className="whitespace-nowrap px-6 py-4 font-medium">{val.username}</td>
+                            <td className="whitespace-nowrap px-6 py-4">{val.name}</td>
+                            <td className="whitespace-nowrap px-6 py-4">{val.role}</td>
+                            <td className="whitespace-nowrap px-6 py-4">{val.status}</td>
+                            <td className="whitespace-nowrap px-6 py-4text-center">
                                 <div className="flex gap-1 justify-center">
                                     <button className="w-8 h-8 flex items-center justify-center text-white rounded-md bg-red-600 hover:bg-red-700">
                                         <Icon path={mdiDelete} size={'22px'} />

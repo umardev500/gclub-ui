@@ -1,8 +1,8 @@
 import { UserList } from '@components/organisms'
 import { mdiPlus } from '@mdi/js'
 import Icon from '@mdi/react'
-import { type ColumnDef } from '@tanstack/react-table'
-import React, { useMemo } from 'react'
+import React from 'react'
+import { faker } from '@faker-js/faker'
 
 interface Item {
     id?: number
@@ -13,14 +13,17 @@ interface Item {
 }
 
 const dummyData = () => {
+    const roles = ['Developer', 'Designer', 'Manager', 'Admin', 'Customer']
+    const status = ['Hold', 'Active', 'Unavailable', 'Available']
+
     const items: Item[] = []
     for (let i = 0; i < 10; i++) {
         items.push({
             id: i,
-            username: `username ${i}`,
-            name: `Item ${i}`,
-            role: `role ${i}`,
-            status: `status ${i}`,
+            username: faker.internet.userName(),
+            name: faker.name.fullName(),
+            role: roles[Math.floor(Math.random() * roles.length)],
+            status: status[Math.floor(Math.random() * status.length)],
         })
     }
     return items
