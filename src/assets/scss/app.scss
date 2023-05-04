@@ -15,7 +15,7 @@ body {
 }
 
 .inner-view {
-  margin-top: 72px;
+  padding-top: calc(72px + 32px);
   transition: all .3s ease-in-out;
 }
 

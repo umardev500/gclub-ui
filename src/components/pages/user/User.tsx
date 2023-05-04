@@ -31,7 +31,7 @@ const dummyData = () => {
 
 export const User: React.FC = () => {
     return (
-        <div className="container m-auto bg-white rounded-md border py-6 px-8">
+        <div className="container mx-auto bg-white rounded-md border py-6 px-8">
             <div className="flex justify-between">
                 <h3 className="text-gray-600 text-xl font-semibold">Account List</h3>
                 <button className="bg-sky-500 whitespace-nowrap flex items-center gap-1 hover:bg-sky-600 px-4 py-1.5 rounded-md text-white">

@@ -1,4 +1,4 @@
-import { Header, Sidebar } from '@components/organisms'
+import { Footer, Header, Sidebar } from '@components/organisms'
 import { Outlet } from 'react-router-dom'
 
 export const RootView: React.FC = () => {
@@ -6,8 +6,9 @@ export const RootView: React.FC = () => {
         <div id="root-view" className="shown">
             <Header />
             <Sidebar />
-            <div className="inner-view px-4 block pt-8">
+            <div className="inner-view px-4 flex flex-col justify-between min-h-screen">
                 <Outlet />
+                <Footer />
             </div>
         </div>
     )
