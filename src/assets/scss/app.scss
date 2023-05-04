@@ -11,6 +11,11 @@ body {
   font-family: 'Roboto';
 }
 
+.inner-view {
+  margin-top: 72px;
+  @apply pl-24;
+}
+
 @media (min-width: 1536px) {
   .container {
     max-width: 1124px;

@@ -6,7 +6,9 @@ export const RootView: React.FC = () => {
         <div id="root-view" className="shown">
             <Header />
             <Sidebar />
-            <Outlet />
+            <div className="inner-view px-4 block pt-8">
+                <Outlet />
+            </div>
         </div>
     )
 }
