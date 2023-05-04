@@ -8,11 +8,11 @@ export const router = createBrowserRouter([
         element: <RootView />,
         children: [
             {
-                path: '/',
+                path: '/home',
                 element: <Home />,
             },
             {
-                path: '/user',
+                path: '/',
                 element: <User />,
             },
         ],
