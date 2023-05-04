@@ -15,7 +15,14 @@ body {
 
 .inner-view {
   margin-top: 72px;
-  @apply pl-24;
+  transition: all .3s ease-in-out;
+}
+
+.shown {
+  .inner-view {
+    @apply pl-24;
+    transition: all .3s ease-in-out;
+  }
 }
 
 @media (min-width: 1536px) {
