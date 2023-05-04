@@ -1,8 +1,8 @@
-import { UserList } from '@components/organisms'
+import { Pagination, UserList } from '@components/organisms'
+import { faker } from '@faker-js/faker'
 import { mdiPlus } from '@mdi/js'
 import Icon from '@mdi/react'
 import React from 'react'
-import { faker } from '@faker-js/faker'
 
 interface Item {
     id?: number
@@ -41,6 +41,10 @@ export const User: React.FC = () => {
             </div>
             <div>
                 <UserList data={dummyData()} />
+
+                <div className="mb-2 flex justify-end">
+                    <Pagination pageCount={4} />
+                </div>
             </div>
         </div>
     )
