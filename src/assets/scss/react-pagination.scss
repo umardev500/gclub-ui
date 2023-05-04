@@ -1,6 +1,11 @@
 .react-paginate {
     display: inline-flex;
     @apply -space-x-px;
+    flex-wrap: wrap;
+
+    li {
+        height: 40px;
+    }
 
     a {
         padding-left: 1rem;

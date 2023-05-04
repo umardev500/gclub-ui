@@ -32,7 +32,7 @@ const dummyData = () => {
 export const User: React.FC = () => {
     return (
         <div className="container mx-auto bg-white rounded-md border py-6 px-8">
-            <div className="flex justify-between">
+            <div className="flex gap-2 justify-between flex-wrap">
                 <h3 className="text-gray-600 text-xl font-semibold">Account List</h3>
                 <button className="bg-sky-500 whitespace-nowrap flex items-center gap-1 hover:bg-sky-600 px-4 py-1.5 rounded-md text-white">
                     <Icon path={mdiPlus} size={'20px'} />
@@ -42,7 +42,7 @@ export const User: React.FC = () => {
             <div>
                 <UserList data={dummyData()} />
 
-                <div className="mb-2 flex justify-end">
+                <div className="mb-2 flex justify-center xl:justify-end">
                     <Pagination pageCount={4} />
                 </div>
             </div>
