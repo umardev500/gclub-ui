@@ -3,6 +3,7 @@
 .header {
   height: 72px;
   transition: padding .3s ease-in-out;
+  backdrop-filter: blur(8px);
 }
 
 .shown {
