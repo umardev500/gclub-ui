@@ -1,0 +1,6 @@
+.table {
+  tbody > tr > td:first-child {
+    @apply font-medium;
+    @apply text-gray-700;
+  }
+}

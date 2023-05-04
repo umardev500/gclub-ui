@@ -1,4 +1,6 @@
 import { UserList } from '@components/organisms'
+import { mdiPlus } from '@mdi/js'
+import Icon from '@mdi/react'
 import { type ColumnDef } from '@tanstack/react-table'
 import React, { useMemo } from 'react'
 
@@ -52,8 +54,12 @@ export const User: React.FC = () => {
 
     return (
         <div className="container m-auto bg-white rounded-md border py-6 px-8">
-            <div>
+            <div className="flex justify-between">
                 <h3 className="text-gray-600 text-xl font-semibold">Account List</h3>
+                <button className="bg-sky-500 whitespace-nowrap flex items-center gap-1 hover:bg-sky-600 px-4 py-1.5 rounded-md text-white">
+                    <Icon path={mdiPlus} size={'20px'} />
+                    <span>Add new user</span>
+                </button>
             </div>
             <div>
                 <UserList data={dummyData()} columns={cols} />
