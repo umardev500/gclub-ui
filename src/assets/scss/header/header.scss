@@ -2,10 +2,12 @@
 
 .header {
   height: 72px;
+  transition: padding .3s ease-in-out;
 }
 
 .shown {
   .header {
     @apply pl-24;
+    transition: padding .3s ease-in-out;
   }
 }
